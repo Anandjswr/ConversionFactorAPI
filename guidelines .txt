@@ -1,0 +1,24 @@
+Project created name "ConversionFactorAPI"
+
+SQL Connection with DB Details:
+
+Data Source=DESKTOP-UDBK2II\SQLEXPRESS;Initial Catalog=EmployeeDB;Integrated Security=True
+Below Create table and insert script file name.
+ConversionFactor.sql
+
+In visual studio i have added below nuget packages.
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.Extensions.Configuration
+
+After that run below command 
+
+Scaffold-DbContext "Server=DESKTOP-UDBK2II\SQLEXPRESS;Initial Catalog=EmployeeDB;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+All APi detals added in ConversionFactorsController file.
+
+Below API Address:
+api/ConversionFactors/metricToImperial?value=10&metricUnit=m&imperialUnit=ft
+api/ConversionFactors/imperialToMetric?value=10&imperialUnit=ft&metricUnit=m
